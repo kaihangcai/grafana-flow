@@ -25,7 +25,7 @@ cells:
       decimalPoints: 0
     labelColor:
       thresholdsRef: "percentage"
-    link: "google"
+    linkRef: "google"
   dex_rate:
     dataRef: "test-data-small-cos"
     label:
@@ -36,7 +36,7 @@ cells:
     dataRef: 'test-data-small-cos'
     flowAnimation: *flow-slow
   docs:
-    link: "grafana-flow-docs"
+    linkRef: "grafana-flow-docs"
   light_processor:
     dataRef: 'test-data-light_processor'
     label:
@@ -63,11 +63,13 @@ cells:
       units: 'ms'
       decimalPoints: 0
   sa:
-    dataRef: "test-data-small-cos"
+    dataRef: "A-series2 test"
     label:
       separator: "cr"
-      units: ""
+      units: "percent"
       decimalPoints: 0
+    labelColor:
+      thresholdsRef: "percentage"
   sa_rate:
     dataRef: "test-data-small-sin"
     label:
@@ -99,17 +101,13 @@ cells:
       units: "ms"
       decimalPoints: 0
   web:
-    dataRef: "test-data-large-sin"    # simulate high traffic volume
+    dataRef: "A-series1 test"    # simulate high traffic volume
     label:
       separator: "cr"
-      units: ""
+      units: "percent"
       decimalPoints: 0
     labelColor:
-      gradientMode: "hue"
-      thresholds:
-        - {color: "green", level: 0}
-        - {color: "orange", level: 500}
-        - {color: "red", level: 1000}
+      thresholdsRef: "percentage"
   web_rate:
     dataRef: "test-data-small-cos"
     label:
