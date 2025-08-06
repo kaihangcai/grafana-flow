@@ -142,6 +142,8 @@ cells:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+    labelColor:
+      thresholdRef: "latency200"
     tags: ["Service to Wallet"]
   web_transactions:
     dataRef: "test-data-small-cos"
