@@ -10,15 +10,88 @@ anchorLinks:
       thresholdLwrDurationSecs: 1
       thresholdUprValue: 100
       thresholdUprDurationSecs: 0.1
-  - link: &google
-      url: "https://google.com/"
 
 #------------------------------------------------------------------------------
 # Panel Config
 
 cellIdPreamble: "cell-"
 gradientMode: "hue"
-cells: 
+cells:
+  dex:
+    dataRef: "A-series test"
+    label:
+      separator: "cr"
+      units: "percent"
+      decimalPoints: 0
+    labelColor:
+      thresholdsRef: "percentage"
+    link: "google"
+  dex_rate:
+    dataRef: "test-data-small-cos"
+    label:
+      separator: "colon"
+      units: "ms"
+      decimalPoints: 0
+  docs:
+    link: "grafana-flow-docs"
+  light_processor:
+    dataRef: 'test-data-light_processor'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  light_processor_rate:
+    dataRef: 'test-data-light_processor_rate'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  node:
+    dataRef: 'test-data-node'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  node_rate:
+    dataRef: 'test-data-node_rate'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  on_chain:
+    dataRef: 'test-data-on_chain'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  sa:
+    dataRef: "test-data-small-cos"
+    label:
+      separator: "cr"
+      units: ""
+      decimalPoints: 0
+  sa_rate:
+    dataRef: "test-data-small-sin"
+    label:
+      separator: "colon"
+      units: "ms"
+      decimalPoints: 0
+  vault:
+    dataRef: 'test-data-vault'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  vault_rate:
+    dataRef: 'test-data-vault_rate'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  wallet:
+    dataRef: 'test-data-wallet'
+    label:
+      units: 'ms'
+      decimalPoints: 0
+  wallet_rate:
+    dataRef: "B-test"
+    label:
+      separator: "colon"
+      units: "ms"
+      decimalPoints: 0
   web:
     dataRef: "test-data-large-sin"    # simulate high traffic volume
     label:
@@ -40,36 +113,3 @@ cells:
   web_transactions:
     dataRef: "test-data-small-cos"
     flowAnimation: *flow-slow
-  dex:
-    dataRef: "A-series test"
-    label:
-      separator: "cr"
-      units: "percent"
-      decimalPoints: 0
-    labelColor:
-      thresholdsRef: "percentage"
-    link: *google
-  dex_rate:
-    dataRef: "test-data-small-cos"
-    label:
-      separator: "colon"
-      units: "ms"
-      decimalPoints: 0
-  sa:
-    dataRef: "test-data-small-cos"
-    label:
-      separator: "cr"
-      units: ""
-      decimalPoints: 0
-  sa_rate:
-    dataRef: "test-data-small-sin"
-    label:
-      separator: "colon"
-      units: "ms"
-      decimalPoints: 0
-  wallet_rate:
-    dataRef: "B-test"
-    label:
-      separator: "colon"
-      units: "ms"
-      decimalPoints: 0
