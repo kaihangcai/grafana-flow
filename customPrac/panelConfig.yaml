@@ -12,7 +12,6 @@ anchorLinks:
       thresholdUprDurationSecs: 0.1
   - link: &google
       url: "https://google.com/"
-      params: "time"
 
 #------------------------------------------------------------------------------
 # Panel Config
@@ -42,19 +41,16 @@ cells:
     dataRef: "test-data-small-cos"
     flowAnimation: *flow-slow
   dex:
-    dataRef: "A-series"
+    dataRef: "test-data-small-cos"
     label:
       separator: "cr"
       units: ""
-    labelColor:
-      thresholds:
-        - {color: "green", level: 0}
-        - {color: "red", level: 100}
+      decimalPoints: 0
     link: *google
   dex_rate:
-    dataRef: "test-data-small-sin"
+    dataRef: "test-data-small-cos"
     label:
-      separator: "cr"
+      separator: "colon"
       units: "ms"
       decimalPoints: 0
   sa:
@@ -65,6 +61,12 @@ cells:
       decimalPoints: 0
   sa_rate:
     dataRef: "test-data-small-sin"
+    label:
+      separator: "colon"
+      units: "ms"
+      decimalPoints: 0
+  wallet_rate:
+    dataRef: "A-series"
     label:
       separator: "colon"
       units: "ms"
