@@ -32,6 +32,9 @@ cells:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+  dex_transactions:
+    dataRef: 'test-data-small-cos'
+    flowAnimation: *flow-slow
   docs:
     link: "grafana-flow-docs"
   light_processor:
@@ -71,6 +74,9 @@ cells:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+  sa_transactions:
+    dataRef: 'test-data-small-sin'
+    flowAnimation: *flow-slow
   vault:
     dataRef: 'test-data-vault'
     label:
