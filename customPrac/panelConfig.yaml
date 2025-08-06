@@ -43,8 +43,9 @@ cells:
       units: 'ms'
       decimalPoints: 0
   light_processor_rate:
-    dataRef: 'test-data-light_processor_rate'
+    dataRef: 'C-series'
     label:
+      separator: 'colon'
       units: 'ms'
       decimalPoints: 0
   node:
@@ -53,8 +54,9 @@ cells:
       units: 'ms'
       decimalPoints: 0
   node_rate:
-    dataRef: 'test-data-node_rate'
+    dataRef: 'NodeRate'
     label:
+      separator: 'colon'
       units: 'ms'
       decimalPoints: 0
   on_chain:
@@ -85,8 +87,9 @@ cells:
       units: 'ms'
       decimalPoints: 0
   vault_rate:
-    dataRef: 'test-data-vault_rate'
+    dataRef: 'B-series1'
     label:
+      separator: "colon"
       units: 'ms'
       decimalPoints: 0
   wallet:
@@ -95,7 +98,7 @@ cells:
       units: 'ms'
       decimalPoints: 0
   wallet_rate:
-    dataRef: "B-test"
+    dataRef: "B-series"
     label:
       separator: "colon"
       units: "ms"
