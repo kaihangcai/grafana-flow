@@ -20,7 +20,7 @@ cellIdPreamble: "cell-"
 gradientMode: "hue"
 cells: 
   web:
-    dataRef: "test-data-large-sin"
+    dataRef: "test-data-large-sin"    # simulate high traffic volume
     label:
       separator: "cr"
       units: ""
@@ -41,11 +41,13 @@ cells:
     dataRef: "test-data-small-cos"
     flowAnimation: *flow-slow
   dex:
-    dataRef: "test-data-small-cos"
+    dataRef: "A-series test"
     label:
       separator: "cr"
-      units: ""
+      units: "percent"
       decimalPoints: 0
+    labelColor:
+      thresholdsRef: "percentage"
     link: *google
   dex_rate:
     dataRef: "test-data-small-cos"
@@ -66,7 +68,7 @@ cells:
       units: "ms"
       decimalPoints: 0
   wallet_rate:
-    dataRef: "A-series"
+    dataRef: "B-test"
     label:
       separator: "colon"
       units: "ms"
