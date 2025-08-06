@@ -12,6 +12,15 @@ anchorLinks:
       thresholdUprDurationSecs: 0.1
 
 #------------------------------------------------------------------------------
+# Highlighting
+
+tagConfig:
+  legend: ["Stage:", "Service to Wallet", "Wallet to Vault", "Vault to LP", "LP to Node", "Node to OnChain", "|"]
+  color: "yellow"
+  highlightRgbFactor: 5.0
+  lowlightAlphaFactor: 0.3
+
+#------------------------------------------------------------------------------
 # Panel Config
 
 cellIdPreamble: "cell-"
@@ -26,15 +35,18 @@ cells:
     labelColor:
       thresholdsRef: "percentage"
     linkRef: "google"
+    tags: ["Service to Wallet"]
   dex_rate:
     dataRef: "test-data-small-cos"
     label:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+    tags: ["Service to Wallet"]
   dex_transactions:
     dataRef: 'test-data-small-cos'
     flowAnimation: *flow-slow
+    tags: ["Service to Wallet"]
   docs:
     linkRef: "grafana-flow-docs"
   light_processor:
@@ -42,28 +54,33 @@ cells:
     label:
       units: 'ms'
       decimalPoints: 0
+    tags: ["Vault to LP", "LP to Node"]
   light_processor_rate:
     dataRef: 'C-series'
     label:
       separator: 'colon'
       units: 'ms'
       decimalPoints: 0
+    tags: ["Vault to LP", "LP to Node"]
   node:
     dataRef: 'test-data-node'
     label:
       units: 'ms'
       decimalPoints: 0
+    tags: ["LP to Node", "Node to OnChain"]
   node_rate:
     dataRef: 'NodeRate'
     label:
       separator: 'colon'
       units: 'ms'
       decimalPoints: 0
+    tags: ["LP to Node", "Node to OnChain"]
   on_chain:
     dataRef: 'test-data-on_chain'
     label:
       units: 'ms'
       decimalPoints: 0
+    tags: ["Node to OnChain"]
   sa:
     dataRef: "A-series2 test"
     label:
@@ -72,37 +89,44 @@ cells:
       decimalPoints: 0
     labelColor:
       thresholdsRef: "percentage"
+    tags: ["Service to Wallet"]
   sa_rate:
     dataRef: "test-data-small-sin"
     label:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+    tags: ["Service to Wallet"]
   sa_transactions:
     dataRef: 'test-data-small-sin'
     flowAnimation: *flow-slow
+    tags: ["Service to Wallet"]
   vault:
     dataRef: 'test-data-vault'
     label:
       units: 'ms'
       decimalPoints: 0
+    tags: ["Wallet to Vault", "Vault to LP"]
   vault_rate:
     dataRef: 'B-series1'
     label:
       separator: "colon"
       units: 'ms'
       decimalPoints: 0
+    tags: ["Wallet to Vault", "Vault to LP"]
   wallet:
     dataRef: 'test-data-wallet'
     label:
       units: 'ms'
       decimalPoints: 0
+    tags: ["Service to Wallet", "Wallet to Vault"]
   wallet_rate:
     dataRef: "B-series"
     label:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+    tags: ["Service to Wallet", "Wallet to Vault"]
   web:
     dataRef: "A-series1 test"    # simulate high traffic volume
     label:
@@ -111,12 +135,15 @@ cells:
       decimalPoints: 0
     labelColor:
       thresholdsRef: "percentage"
+    tags: ["Service to Wallet"]
   web_rate:
     dataRef: "test-data-small-cos"
     label:
       separator: "colon"
       units: "ms"
       decimalPoints: 0
+    tags: ["Service to Wallet"]
   web_transactions:
     dataRef: "test-data-small-cos"
     flowAnimation: *flow-slow
+    tags: ["Service to Wallet"]
