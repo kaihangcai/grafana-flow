@@ -1,0 +1,82 @@
+---
+
+#------------------------------------------------------------------------------
+# YAML Aliases to simplify maintenance
+
+anchorLinks:
+  - flowAnimation: &flow-slow
+      thresholdOffValue: 2
+      thresholdLwrValue: 10
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 100
+      thresholdUprDurationSecs: 0.1
+  - flowAnimation: &flow-fast
+      thresholdOffValue: 10
+      thresholdLwrValue: 100
+      thresholdLwrDurationSecs: 1
+      thresholdUprValue: 600
+      thresholdUprDurationSecs: 0.1
+
+#------------------------------------------------------------------------------
+# Panel Config
+
+test:
+  testDataBaseOffset: 1
+  
+cellIdPreamble: "cell-"
+gradientMode: "hue"
+cells: 
+  web:
+    dataRef: "test-data-large-sin"
+    label:
+      separator: "cr"
+      units: "ms"
+    labelColor:
+      gradientMode: "hue"
+      thresholds:
+        - {color: "green", level: 0}
+        - {color: "orange", level: 500}
+        - {color: "red", level: 1000}
+  web_rate:
+    dataRef: "test-data-small-cos"
+    label:
+      separator: "cr"
+      units: "ms"
+      decimalPoints: 0
+  web_transactions:
+    dataRef: "test-data-small-cos"
+    flowAnimation: *flow-slow
+  dex:
+    dataRef: "test-data-large-cos"
+    label:
+      separator: "cr"
+      units: "ms"
+    labelColor:
+      thresholds:
+        - {color: "green", level: 0}
+        - {color: "orange", level: 500}
+        - {color: "red", level: 1000}
+  dex_rate:
+    dataRef: "test-data-small-sin"
+    label:
+      separator: "cr"
+      units: "ms"
+      decimalPoints: 0
+  sa:
+    dataRef: "test-data-small-cos"
+    label:
+      separator: "cr"
+      units: "ms"
+      decimalPoints: 0
+  sa_rate:
+    dataRef: "test-data-small-sin"
+    label:
+      separator: "cr"
+      units: "ms"
+      decimalPoints: 0
+  wallet:
+  wallet_rate:
+  vault:
+  light_processor:
+  node:
+  on_chain:
