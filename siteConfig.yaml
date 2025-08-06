@@ -37,3 +37,11 @@ thresholds:
     - {color: "green", level: 0.4}
     - {color: "amber", level: 0.6}
     - {color: "red", level: 0.8}
+  latency-200:
+    - {color: "green", level: 40}
+    - {color: "amber", level: 100}
+    - {color: "green", level: 160}
+  latency-50:
+    - {color: "green", level: 10}
+    - {color: "amber", level: 25}
+    - {color: "green", level: 40}
