@@ -3,6 +3,8 @@
 links:
   google:
     url: "https://google.com/"
+  grafana-flow-docs:
+    url: "https://grafana.com/grafana/plugins/andrewbmchugh-flow-panel/"
 colors:
   red: "#FF0000"
   amber: "#FFBF00"
